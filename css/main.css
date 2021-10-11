@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;700&display=swap");
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+body::before {
+  content: "";
+  background-image: url(../Img/Bg.png);
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 53vmax;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+@media screen and (max-width: 992px) {
+  body::before {
+    opacity: 0.4;
+  }
+}
+
+.custom-nav .navbar-brand img {
+  width: 50px;
+  height: 50px;
+  margin-top: -14px;
+}
+
+.custom-nav .navbar-brand span {
+  color: #f35ca3;
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-left: 0.1em;
+}
+
+.custom-nav #navbarNav .navbar-nav .nav-item .nav-link {
+  color: #f35ca3;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-left: 1.6em;
+  font-size: 1rem;
+}
+
+.custom-nav #navbarNav .navbar-nav .nav-item .nav-link:hover {
+  color: #e31173;
+}
+
+.custom-nav #navbarNav .navbar-nav .nav-item .sign-up-button {
+  display: inline-block;
+  color: white;
+  background-color: #f35ca3;
+  padding: 5px 24px;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 992px) {
+  .custom-nav {
+    margin-top: 2em;
+    position: relative;
+  }
+}
+
+.costum-section {
+  margin-top: 4em;
+}
+
+.costum-section h2 {
+  font-weight: 700;
+  font-size: 3.5rem;
+  color: #f35ca3;
+  white-space: nowrap;
+  line-height: 0.9;
+}
+
+.costum-section h3 {
+  font-weight: 400;
+  font-size: 2rem;
+  color: #f35ca3;
+  line-height: 0.9;
+  margin-left: 7px;
+}
+
+.costum-section p {
+  color: #393c43;
+  font-size: 1rem;
+  margin-top: 2em;
+}
+
+.costum-section a {
+  display: inline-block;
+  color: white;
+  background-color: #f35ca3;
+  padding: 5px 24px;
+  text-decoration: none;
+  border-radius: 20px;
+  margin-top: 1em;
+  border: 1px solid transparent;
+  -webkit-transform: 0.4s ease;
+          transform: 0.4s ease;
+}
+
+.costum-section a:hover {
+  color: #f35ca3;
+  background-color: transparent;
+  border: 1px solid #f35ca3;
+}
+
+@media screen and (max-width: 992px) {
+  .costum-section {
+    margin-top: 3em;
+    text-align: center;
+  }
+  .costum-section p {
+    margin-left: 15px;
+    margin-right: 15px;
+    color: #393c43;
+  }
+  .costum-section a {
+    position: relative;
+  }
+  .costum-section h2,
+  .costum-section h3,
+  .costum-section p {
+    text-shadow: 1px 1px 1px black;
+    position: relative;
+  }
+}
+/*# sourceMappingURL=main.css.map */

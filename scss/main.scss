@@ -1,0 +1,141 @@
+// Font
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;700&display=swap");
+
+// Variable
+$primary-color: #f35ca3;
+$secondary-color: #aabde6;
+$tertiary-color: #ac93d0;
+$text-color: #393c43;
+
+// mixin
+@mixin tombol() {
+  display: inline-block;
+  color: white;
+  background-color: $primary-color;
+  padding: 5px 24px;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+// Styles
+body {
+  font-family: "Montserrat", sans-serif;
+  &::before {
+    content: "";
+    background-image: url(../Img/Bg.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 53vmax;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    @media screen and (max-width: 992px) {
+      opacity: 0.4;
+    }
+  }
+}
+
+// Navbar
+.custom-nav {
+  .navbar-brand {
+    img {
+      width: 50px;
+      height: 50px;
+      margin-top: -14px;
+    }
+    span {
+      color: $primary-color;
+      font-weight: 700;
+      font-size: 1.8rem;
+      margin-left: 0.1em;
+    }
+  }
+
+  #navbarNav {
+    .navbar-nav {
+      .nav-item {
+        .nav-link {
+          color: $primary-color;
+          font-weight: 500;
+          text-transform: uppercase;
+          margin-left: 1.6em;
+          font-size: 1rem;
+
+          &:hover {
+            color: darken($color: $primary-color, $amount: 18%);
+          }
+        }
+        .sign-up-button {
+          @include tombol();
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 992px) {
+    margin-top: 2em;
+    position: relative;
+  }
+}
+
+.costum-section {
+  margin-top: 4em;
+  h2 {
+    font-weight: 700;
+    font-size: 3.5rem;
+    color: $primary-color;
+    white-space: nowrap;
+    line-height: 0.9;
+  }
+
+  h3 {
+    font-weight: 400;
+    font-size: 2rem;
+    color: $primary-color;
+    line-height: 0.9;
+    margin-left: 7px;
+  }
+
+  p {
+    color: $text-color;
+    font-size: 1rem;
+    margin-top: 2em;
+  }
+
+  a {
+    @include tombol();
+    margin-top: 1em;
+    border: 1px solid transparent;
+    transform: 0.4s ease;
+
+    &:hover {
+      color: $primary-color;
+      background-color: transparent;
+      border: 1px solid $primary-color;
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    margin-top: 3em;
+    text-align: center;
+
+    p {
+      margin-left: 15px;
+      margin-right: 15px;
+      color: $text-color;
+    }
+
+    a {
+      position: relative;
+    }
+
+    h2,
+    h3,
+    p {
+      text-shadow: 1px 1px 1px rgba($color: black, $alpha: 30%);
+      position: relative;
+    }
+  }
+}
